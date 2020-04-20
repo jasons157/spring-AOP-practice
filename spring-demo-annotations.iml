@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="ApplicationContext" removed="false">
+          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/com/luv2code/aopdemo/DemoConfig.java</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../spring-AOP-practice">
+      <sourceFolder url="file://$MODULE_DIR$/../spring-AOP-practice/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../spring-AOP-practice/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../spring-AOP-practice/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../spring-AOP-practice/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../spring-AOP-practice/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../spring-AOP-practice/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../spring-AOP-practice/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../spring-AOP-practice/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../spring-AOP-practice/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../spring-AOP-practice" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../spring-AOP-practice/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
