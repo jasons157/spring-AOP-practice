@@ -31,7 +31,5 @@ public class AfterReturningDemoApp {
 
         //close the context
         context.close();
-
-        System.out.println("SDF");
     }
 }
