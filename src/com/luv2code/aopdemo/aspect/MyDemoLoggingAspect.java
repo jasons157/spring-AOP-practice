@@ -39,7 +39,17 @@ public class MyDemoLoggingAspect {
         long start = System.currentTimeMillis();
 
         //execute the method
-        Object result = proceedingJoinPoint.proceed();
+        Object result = null;
+
+        try{
+            result = proceedingJoinPoint.proceed();
+        }catch (Exception e){
+            //log exception
+            logger.warning(e.getMessage());
+
+            //give user a custom message
+            result = "Huge issue! Solved it in the aspect advice";
+        }
 
         //get end timestamp
         long end = System.currentTimeMillis();
