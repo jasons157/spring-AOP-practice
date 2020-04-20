@@ -47,8 +47,8 @@ public class MyDemoLoggingAspect {
             //log exception
             logger.warning(e.getMessage());
 
-            //give user a custom message
-            result = "Huge issue! Solved it in the aspect advice";
+            //rethrow exception
+            throw e;
         }
 
         //get end timestamp
