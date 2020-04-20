@@ -2,6 +2,7 @@ package com.luv2code.aopdemo.aspect;
 
 import com.luv2code.aopdemo.Account;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
@@ -16,6 +17,36 @@ import java.util.List;
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
+
+    /**
+     * Will happen before and after the pointcut expression.
+     * This one will calculate the total runtime for getFortune()
+     * @param proceedingJoinPoint
+     * @return
+     * @throws Throwable
+     */
+    @Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
+    public Object aroundGetFortune(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{//Around uses ProceedingJoinPoint instead of JoinPoint
+
+        //print out method we are advising on
+        String method = proceedingJoinPoint.getSignature().toShortString();
+        System.out.println("\n=====>>> Executing @Around on method: " + method);
+
+        //get begin timestamp
+        long start = System.currentTimeMillis();
+
+        //execute the method
+        Object result = proceedingJoinPoint.proceed();
+
+        //get end timestamp
+        long end = System.currentTimeMillis();
+
+        //calculate duration and display
+        System.out.println("Total duration = " + (end-start)/1000 + " seconds");
+
+        //Return result to calling program
+        return result;
+    }
 
     /**
      * Will output information after a method is called, regardless of success or failure

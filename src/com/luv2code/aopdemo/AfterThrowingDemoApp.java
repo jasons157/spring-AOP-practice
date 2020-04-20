@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.List;
 
 /**
- * This app is for testing out @AfterReturning
+ * This app is for testing out @AfterThrowing
  */
 public class AfterThrowingDemoApp {
     public static void main(String[] args) {
